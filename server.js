@@ -1,4 +1,6 @@
-import http from "http";
+//import http from "http";
+import "dotenv/config";
+import App from "./src/App.js";
 
 const PORT = 3000
 
@@ -8,13 +10,13 @@ const rotas = {
     "/autores": "rota autores"
 }
 
-const server = http.createServer((req, res) => {
+/*const server = http.createServer((req, res) => {
   res.writeHead(200, {
     "Content-Type": "text/plain"
   });
   res.end(rotas[req.url]);
-});
+});*/
 
-server.listen(PORT, () => {
+App.listen(PORT, () => {
     console.log('servidor escutando')
 });
